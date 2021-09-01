@@ -48,8 +48,16 @@ Have you ever wondered what yarn is going to be best for your next project? Is a
  
 [Back to Top](#table-of-contents)
 ### User Requirements and Expectations
+### Requirements
+* Users requires easy navigation of site
+* Easy to use search function
+* Images of yarns being reviewed
+* Users want to be able to leave their own reviews
+
+### Expectations
 
 * 
+
 [Back to Top](#table-of-contents)
 ### Design Choices
 
