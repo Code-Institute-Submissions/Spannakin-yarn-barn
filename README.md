@@ -32,15 +32,24 @@ Have you ever wondered what yarn is going to be best for your next project? Is a
 
 ### User Goals
 * to make an informed choice of yarn for the next project
-* 
+* to see what other crafters think about potential yarns
+* to review yarns that the user has worked with
 
 [Back to Top](#table-of-contents)
 
 ### User Stories
 
+* As a user, I want to be able to easily navigate the site
+* As a user, I want to be able to search yarns by weight and color
+* As a user, I want to be able to leave a review of a yarn that I have worked with to help other crafters.
+* As a user, I want to be able to register for and account
+* As a user, I want to be able to log in and out of the site to leave reviews.
+* As a user, I want to be able to add yarns to the library.
+ 
 [Back to Top](#table-of-contents)
 ### User Requirements and Expectations
 
+* 
 [Back to Top](#table-of-contents)
 ### Design Choices
 
