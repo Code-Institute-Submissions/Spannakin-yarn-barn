@@ -45,7 +45,7 @@ Have you ever wondered what yarn is going to be best for your next project? Is a
 ### Design Choices
 
 I used [coolers](https://coolors.co/) to help select a color palette for the site.
-I selected a variety or bright pastel colors as it is calming yet engaging at the same time.
+I selected a variety of bright pastel colors as it is calming yet engaging at the same time.
 
 ![Color Palette](images/YarnBarnColourPalette.png)
 
