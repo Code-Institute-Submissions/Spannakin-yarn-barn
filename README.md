@@ -77,6 +77,16 @@ I decided to use [Balsamiq](https://balsamiq.com/) to make the wireframes, theay
 
 ## Tablet Wireframes
 
+[Home Page](Images/HomePageTablet.png)
+
+[Login Page](Images/LoginTablet.png)
+
+[Registration Page](Images/RegistrationTablet.png)
+
+[Profile Page](Images/ProfileTablet.png)
+
+[Yarn Reviews](Images/YarnsTablet.png)
+
 ## Mobile Wireframes
 
 I used [draw.io]() to create a flowchart for how I paln to make the functions work
