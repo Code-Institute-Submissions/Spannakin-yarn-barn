@@ -62,10 +62,25 @@ I selected a variety of bright pastel colors as it is calming yet engaging at th
 [Back to Top](#table-of-contents)
 
 ## Wireframes
-
+I decided to use [Balsamiq](https://balsamiq.com/) to make the wireframes, theay can be viewed below.
 ## Desktop Wireframes
 
-[Home Page](images/HomePageDesktop.png)
+[Home Page](Images/HomePageDesktop.png)
+
+[Login Page](Images/LoginDesktop.png)
+
+[Registration Page](Images/RegistrationDesktop.png)
+
+[Profile Page](Images/ProfileDesktop.png)
+
+[Yarn Reviews](Images/YarnReviews.png)
+
+## Tablet Wireframes
+
+## Mobile Wireframes
+
+I used [draw.io]() to create a flowchart for how I paln to make the functions work
+
 
 [Back to Top](#table-of-contents)
 ## Features
