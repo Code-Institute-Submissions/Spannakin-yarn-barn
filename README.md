@@ -66,6 +66,11 @@ I selected a variety of bright pastel colors as it is calming yet engaging at th
 
 ![Color Palette](images/YarnBarnColourPalette.png)
 
+* Color #F28428 will be used as the main background color
+* Color #84A59D will be used for the nav bar as it is in high contrast to the main page color
+* Color #F6BD60 will be used as a border color to highlight images and taxt areas
+
+
 
 [Back to Top](#table-of-contents)
 
