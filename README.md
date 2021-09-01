@@ -48,6 +48,10 @@ Have you ever wondered what yarn is going to be best for your next project? Is a
 
 ## Wireframes
 
+## Desktop Wireframes
+
+[Home Page](images/HomePageDesktop.png)
+
 [Back to Top](#table-of-contents)
 ## Features
 ### Existing Features
