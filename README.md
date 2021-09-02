@@ -143,12 +143,31 @@ I chose to use MongoDB for my database and set it up with the following collecti
 [Back to Top](#table-of-contents)
 
 ## Technologies Used
+
+### Languages
+
 * HTML
 * CSS
 * JavaScript
 * Python
+
+### Libraries and Frameworks
+
+* Google Fonts
+
+### Tools
+
+* Git
+* Gitpod
+* Heroku
 * Flask
-* MongoDB
+* MongoDB Atlas
+* Balsamiq
+* PyMogo
+* Jinja
+* W3C HTML Validataion Service
+* W3C CSS Validation Service
+
 
 [Back to Top](#table-of-contents)
 
