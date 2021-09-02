@@ -137,6 +137,15 @@ I chose to use MongoDB for my database and set it up with the following collecti
 ## Features
 ### Existing Features
 
+* Registration Functionality
+* Sign in and sign out function
+* CRUD functions
+    * CREATE: create a review of a yarn and add it to the database.
+    * READ: look up and read about yarns in the library.
+    * UPDATE: Add reviews to existing yarns.
+    * DELETE: Delete a review and the Admin can delete a yarn entirely.
+
+
 [Back to Top](#table-of-contents)
 ### Features to be implemented 
 
