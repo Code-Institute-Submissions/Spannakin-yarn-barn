@@ -81,29 +81,40 @@ I have used [Google Fonts](https://fonts.google.com/) for  the fonts used for th
 I decided to use [Balsamiq](https://balsamiq.com/) to make the wireframes, theay can be viewed below.
 ## Desktop Wireframes
 
-[Home Page](Images/HomePageDesktop.png)
+[Home Page](Wireframes/HomePageDesktop.png)
 
-[Login Page](Images/LoginDesktop.png)
+[Login Page](Wireframes/LoginDesktop.png)
 
-[Registration Page](Images/RegistrationDesktop.png)
+[Registration Page](Wireframes/RegistrationDesktop.png)
 
-[Profile Page](Images/ProfileDesktop.png)
+[Profile Page](Wireframes/ProfileDesktop.png)
 
-[Yarn Reviews](Images/YarnReviews.png)
+[Yarn Reviews](Wireframes/YarnReviews.png)
 
 ## Tablet Wireframes
 
-[Home Page](Images/HomePageTablet.png)
+[Home Page](Wireframes/YarnBarnHomeTablet.png)
 
-[Login Page](Images/LoginTablet.png)
+[Login Page](Wireframes/YarnBarnLoginTablet.png)
 
-[Registration Page](Images/RegistrationTablet.png)
+[Registration Page](Wireframes/YarnBarnRegistrationTablet.png)
 
-[Profile Page](Images/ProfileTablet.png)
+[Profile Page](Wireframes/YarnBarnProfileTablet.png)
 
-[Yarn Reviews](Images/YarnsTablet.png)
+[Yarn Reviews](Wireframes/YarnBarnYarnsTablet.png)
 
 ## Mobile Wireframes
+
+[Home Page](Wireframes/YarnBarnHomeMobile.png)
+
+[Login Page](Wireframes/YarnBarnLoginMobile.png)
+
+[Registration Page](Wireframes/YarnBarnRegistrationMobile.png)
+
+[Profile Page](Wireframes/YarnBarnProfileMobile.png)
+
+[Yarn Reviews](Wireframes/YarnBarnYarnsMobile.png)
+
 
 I used [draw.io]() to create a flowchart for how I paln to make the functions work
 [Flowchart](Images/YarnBarnFlowchart.drawio.png)
