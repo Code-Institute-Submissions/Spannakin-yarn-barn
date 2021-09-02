@@ -59,7 +59,7 @@ Have you ever wondered what yarn is going to be best for your next project? Is a
 * 
 
 [Back to Top](#table-of-contents)
-### Design Choices
+## Design Choices
 
 I used [coolers](https://coolors.co/) to help select a color palette for the site.
 I selected a variety of bright pastel colors as it is calming yet engaging at the same time.
@@ -70,6 +70,9 @@ I selected a variety of bright pastel colors as it is calming yet engaging at th
 * Color #84A59D will be used for the nav bar as it is in high contrast to the main page color
 * Color #F6BD60 will be used as a border color to highlight images and taxt areas
 
+### Fonts
+
+I have used [Google Fonts](https://fonts.google.com/) for  the fonts used for this site, I have chosen AmaticSC for the Title font and Roboto for the main text used.
 
 
 [Back to Top](#table-of-contents)
@@ -104,6 +107,12 @@ I decided to use [Balsamiq](https://balsamiq.com/) to make the wireframes, theay
 
 I used [draw.io]() to create a flowchart for how I paln to make the functions work
 [Flowchart](Images/YarnBarnFlowchart.drawio.png)
+
+## Database
+
+I chose to use MongoDB for my database and set it up with the following collections:
+
+
 
 
 [Back to Top](#table-of-contents)
