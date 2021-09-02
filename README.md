@@ -112,6 +112,13 @@ I used [draw.io]() to create a flowchart for how I paln to make the functions wo
 
 I chose to use MongoDB for my database and set it up with the following collections:
 
+### Users
+
+| Key | Value |
+|---- | ----- |
+| _id | ObjectId |
+| username | string |
+| password | string |
 
 
 
@@ -127,7 +134,7 @@ I chose to use MongoDB for my database and set it up with the following collecti
 ## Technologies Used
 * HTML
 * CSS
-* jQuery
+* JavaScript
 * Python
 * Flask
 * MongoDB
@@ -144,6 +151,8 @@ I chose to use MongoDB for my database and set it up with the following collecti
 
 [Back to Top](#table-of-contents)
 ## Credits
+Simen
+Family and Friends
 
 [Back to Top](#table-of-contents)
 
