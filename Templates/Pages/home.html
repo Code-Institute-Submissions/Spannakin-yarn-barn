@@ -1,0 +1,15 @@
+{% extends 'layout/base.html' %}
+{%block content%}
+{%include 'Components/Navigation/basic_navigation.html'%}
+<div calss='container-fluid' id='hero-image'>
+    <div id="hero-yarn"></div>
+    <div id="welcome-text">
+        <h1>YarnBarn</h1>
+        <p>Welcome to Yarn Barn where you can find genuine reviews of yarns to help you make 
+            the best choice for your next project.</p>
+        <h3 id="subheading">Sign in or register now.</h3>
+        <a href="{{urlfor()}}" class="btn btn-primary">Sign In</a>
+        <a href="{{urlfor()}}" class="btn btn-primary">Register</a>
+    </div>
+</div>
+{%end block%}
