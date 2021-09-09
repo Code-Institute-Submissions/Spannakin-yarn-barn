@@ -21,3 +21,11 @@ html, body {
     color: var(--text-color);
     background-color: var(--background-color);
 }
+
+h1 {
+    font-family: "Amatic SC", Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 10px;
+}
