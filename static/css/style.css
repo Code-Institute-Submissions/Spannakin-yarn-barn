@@ -29,14 +29,13 @@ h1 {
     text-align: center;
     padding: 10px;
 }
-
-# hero-yarn {
-    background: url('static/images/hero-image-yarn.jpg') ;
+/* home page */
+#hero-yarn {
+    background: url('../images/hero-image-yarn.jpg');
     background-position: center center;
     background-repeat: no-repeat; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
 }
