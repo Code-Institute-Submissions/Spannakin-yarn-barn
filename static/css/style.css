@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,300;1,400;1,500;1,900&display=swap');
 
 :root {
-    --red:#dc3545;
+    --border-color:#F6BD60;
     --green:#28a745;
     --btn-color:#274c77;
     --text-color:#5f788d;
@@ -31,11 +31,17 @@ h1 {
 }
 /* home page */
 #hero-yarn {
-    background: url('../images/hero-image-yarn.jpg');
-    background-position: center center;
-    background-repeat: no-repeat; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    width: 75%;
+    height:85%;
+    padding: 2rem;
+    border: var(--border-color);
+    border-width: 1rem;
+     
+}
+#welcome-text {
+    text-align: center;
+}
+
+#subheading {
+    padding: 10px;
 }
