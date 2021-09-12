@@ -29,6 +29,11 @@ h1 {
     text-align: center;
     padding: 10px;
 }
+
+/* navbar*/
+.navbar-end {
+    align-items: right;
+}
 /* home page */
 #hero-yarn {
     width: 75%;
