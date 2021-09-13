@@ -3,7 +3,68 @@
 {% include 'components/navigation/full-navigation.html' %}
     <h1>Yarn Barn</h1>
     <h2 class="center-align" id="signup-text">Sign up</h3>
+    
+    <form>
+        <!--username field-->
+        <div class="field">
+            <label class="label">Username</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-success" type="text" placeholder="Text input" value="">
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-check"></i>
+              </span>
+            </div>
+            <p class="help is-success">This username is available</p>
+          </div>
+        </div>
+        <!--email field-->
+        <div class="field">
+            <label class="label">Email</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-danger" type="email" placeholder="Email input" value="">
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-exclamation-triangle"></i>
+              </span>
+            </div>
+            <p class="help is-danger">This email is invalid</p>
+            
+        </div>
 
+        <!--password field-->
+        <div class="field">
+            <label class="label"> Password</label>
+            <div class="control has-icons-left has-icons-right">
+                <input class="input is-danger" type="password" placeholder="password">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-unlock-alt"></i>
+                </span>
+                <span class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </span>
+            </div>
+        </div>
+        <!--submit button-->
+        <div class="field is-grouped is-grouped-centered">
+            <p class="control">
+              <a class="button is-primary">
+                Submit
+              </a>
+            </p>
+            <p class="control">
+              <a class="button is-light">
+                Cancel
+              </a>
+            </p>
+          </div>
+                
+        
+    </form>
     
     
 
