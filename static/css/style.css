@@ -50,3 +50,9 @@ h1 {
 #subheading {
     padding: 10px;
 }
+
+/* login page */
+
+#emil-input-login {
+    padding: 3rem;
+}
