@@ -30,6 +30,10 @@ h1 {
     padding: 10px;
 }
 
+.flashes h4 {
+    line-height: 2;
+}
+
 /* navbar*/
 .navbar-end {
     align-items: right;
