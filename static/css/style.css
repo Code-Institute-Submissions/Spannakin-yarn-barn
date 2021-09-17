@@ -46,7 +46,7 @@ h2 {
     float: right;
 }
 
-#site-logo {
+.site-logo {
     height:auto;
     width:auto;
 }
@@ -67,8 +67,11 @@ h2 {
     padding: 10px;
 }
 
-/* login page */
 
-#emil-input-login {
-    padding: 3rem;
+
+
+/*yarns page */
+
+.card {
+    background-color: var(--border-color);
 }
