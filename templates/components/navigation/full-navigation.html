@@ -1,7 +1,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
-        <img src="static/images/yarn-logo.jpg" id="site-logo">
+        <img src="static/images/yarn-logo.jpg" class="site-logo">
       </a>
     </div>
   
@@ -10,11 +10,6 @@
         <a href="{{ url_for('home')}}" class="navbar-item">
           Home
         </a>
-  
-        <a href="{{ url_for('profile', username=username)}}" class="navbar-item">
-          Profile
-        </a>
-  
         <a href="{{ url_for('yarns')}}" class="navbar-item">
           Yarns
           </a>
