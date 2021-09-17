@@ -1,0 +1,18 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+{% include 'components/navigation/basic-navigation.html' %}
+{% include 'components/messages/messages.html' %}
+
+  <h1>Yarn Barn</h1>
+
+  {% if login == True %}
+  <h2>Login</h2>
+  {% include 'components/forms/auth.html' %}
+
+  {% else%}
+  <h2>Sign Up</h2>
+  {% include 'components/forms/auth.html' %}
+
+  {% endif %}
+
+{% endblock %}
