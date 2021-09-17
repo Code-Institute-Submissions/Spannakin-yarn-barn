@@ -184,8 +184,15 @@ I chose to use MongoDB for my database and set it up with the following collecti
 
 ## Testing
 
-### Registration
+### Registration/ Sign Up
 #### Plan
+There will be a form to fill in to create a username and password. When the form is filled in correctly then there will be a flash message for the user to show succes and they will be redirected to their profile page. If the username already exists the user will be shown a message to say that name is already in user and redirected to the sign up page to choose another one.
+
+#### Results
+After a giltch with the connection with Mongo URI this function is now fully working I have tested it by setting up usernames and also by trying to set up an account with an exicstung username to check that the messages are correctly shown for the user.
+
+### Login
+
 
 
 [Back to Top](#table-of-contents)
@@ -194,6 +201,8 @@ I chose to use MongoDB for my database and set it up with the following collecti
 ### Registration/sign in function
 When writing this function its initially wouldn't work despite the Python code being correct after searching through the code, with the help of a Tutor as second set of eyes we found that the password in the MONG_URI was not working so I reset the password for the admin and linked it up again. After this the registration function worked correctly and new users were saved to the database.
 
+### Login function
+The login function was not redirevting through to the profile page, this was due to an error in my coding where I had forgotten to pass in the username perameter to the redirect function. It now works fine.
 
 [Back to Top](#table-of-contents)
 ## Deployment
