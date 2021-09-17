@@ -102,7 +102,7 @@ def logout():
 
 @app.route("/yarns", methods=["GET", "POST"])
 def yarns():
-    return render_template("pages/yarns.html")
+    return render_template("pages/yarns.html", yarns=yarns)
 
 
 if __name__ == "__main__":
