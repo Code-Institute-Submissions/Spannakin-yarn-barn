@@ -3,7 +3,6 @@
     {% else %}
     <form method="POST" action="{{ url_for('register') }}">
 {% endif %}
-    </form>
     <div class="field column is-half is-offset-one-quarter" id="email-input-login">
       <!--username input-->
       <label class="label" for="username">Username</label>
@@ -51,8 +50,7 @@
     </div>
     <div class="column is-half">
       <a href="{{ url_for('home') }}" class="form-buttons">Go back to the home page</a>
-    </div>
-      
+    </div>  
   </div>
     
 </form>
