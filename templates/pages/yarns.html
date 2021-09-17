@@ -1,13 +1,10 @@
 {% extends 'layout/base.html' %}
 {% block content %}
 {% include 'components/navigation/full-navigation.html' %}
+
 <div class="card">
-    <div class="card-image">
-      <figure class="image is-4by3">
-        <img src="#" alt="Yarn image">
-      </figure>
-    </div>
     <div class="card-content">
+      {% for yarn in yarns %}
       <!--yarn image-->
       <div class="media">
         <div class="media-left">
@@ -17,14 +14,17 @@
         </div>
         <!--yarn name and subtitile-->
         <div class="media-content">
-          <p class="title is-4">Yarn Name</p>
-          <p class="subtitle is-6">Yarn Weight</p>
+          <p class="title is-4">{{ yarn.yarn_name }}</p>
+          <p class="subtitle is-6">By {{ yarn.yarn_producer }}</p>
+          <p>{{ yarn.yarn_weight }}</p>
+          <p>{{ yarn.yarn.colour }}</p>
         </div>
       </div>
       <!--Yarn review-->
       <div class="content">
-        <p class="title is-4">Yarn Review</p>
-        <p><!--review link from db--></p>
+        <p class="title is-4">Review</p>
+        <p>{{ yarn.yarn.review }}</p>
+        {% endfor %}
       </div>
       <!--user comments-->
       <article class="media">
@@ -37,14 +37,7 @@
           <nav class="level">
             <div class="level-left">
               <div class="level-item">
-                <a class="button is-info">Submit</a>
-              </div>
-            </div>
-            <div class="level-right">
-              <div class="level-item">
-                <label class="checkbox">
-                  <input type="checkbox"> Press enter to submit
-                </label>
+                <a class="button is-primary">Submit</a>
               </div>
             </div>
           </nav>
