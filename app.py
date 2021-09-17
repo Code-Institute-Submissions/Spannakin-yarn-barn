@@ -24,7 +24,6 @@ def home():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        # check if username already exists in the db
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -38,7 +37,6 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
-        #create user 'session'
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
     return render_template("pages/register.html")
@@ -76,6 +74,11 @@ def login():
 @app.route("/profile", methods=["GET", "POST"])
 def profile():
     return render_template("pages/profile.html")
+
+
+@app.route("/yarns", methods=["GET", "POST"])
+def yarns():
+    return render_template("pages/yarns.html")
 
 
 if __name__ == "__main__":
