@@ -45,6 +45,11 @@ h2 {
 .navbar-end {
     float: right;
 }
+
+#site-logo {
+    height:auto;
+    width:auto;
+}
 /* home page */
 #hero-yarn {
     width: 75%;
