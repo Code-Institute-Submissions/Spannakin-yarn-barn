@@ -50,6 +50,12 @@ h2 {
     height:auto;
     width:auto;
 }
+
+#site-logo-full {
+    height:auto;
+    width:auto;
+}
+
 /* home page */
 #hero-yarn {
     width: 75%;
@@ -74,4 +80,9 @@ h2 {
 
 .card {
     background-color: var(--border-color);
+}
+
+.yarn-photo {
+    width: 10rem;
+    height: 10rem;
 }
