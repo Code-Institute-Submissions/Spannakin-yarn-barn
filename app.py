@@ -102,7 +102,8 @@ def logout():
 
 @app.route("/yarns", methods=["GET", "POST"])
 def yarns():
-    return render_template("pages/yarns.html", yarns=yarns)
+    yarn = list(mongo.db.yarn.find())
+    return render_template("pages/yarns.html", yarn=yarn)
 
 
 if __name__ == "__main__":
