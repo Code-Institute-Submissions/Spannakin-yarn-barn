@@ -149,6 +149,10 @@ I chose to use MongoDB for my database and set it up with the following collecti
 [Back to Top](#table-of-contents)
 ### Features to be implemented 
 
+* an 'About me' section on the profile page
+* the ability to like/favourite yrans that you can then see in your profile so be able to refer back to them
+* a where to buy fo yarns
+
 [Back to Top](#table-of-contents)
 
 ## Technologies Used
