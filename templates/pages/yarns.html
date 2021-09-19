@@ -1,49 +1,34 @@
 {% extends 'layout/base.html' %}
 {% block content %}
 {% include 'components/navigation/full-navigation.html' %}
-
-<div class="card">
-  {% for yarn in yarn %}
-    <div class="card-content">
-      <!--yarn image-->
-      <div class="media">
-        <div class="media-left">
-          <figure class="yarn-photo">
-            <img src="static/images/balls-of-wool.jpg" alt="photo of three balls of wool with a crochet hook">
-          </figure>
-        </div>
-        <!--yarn name and subtitile-->
-        <div class="media-content">
-          <p class="title is-4">Yarn Name: {{ yarn.yarn_name }}</p>
-          <p class="subtitle is-6">By {{ yarn.yarn_producer }}</p>
-          <p>Yarn weight: {{ yarn.yarn_weight }}</p>
-          <p>Yarn colour: {{ yarn.yarn_colour }}</p>
-        </div>
-      </div>
-      <!--Yarn review-->
-      <div class="content">
-        <p class="title is-4">Review</p>
-        <p>{{ yarn.yarn_review }}</p>
-        {% endfor %}
-      </div>
-      <!--user comments-->
-      <article class="media">
-        <div class="media-content">
-          <div class="field">
-            <p class="control">
-              <textarea class="textarea" placeholder="Add a comment..."></textarea>
-            </p>
+<div class= "container is-fluid">
+  <h1>Yarn Barn</h1>
+  <div class="card">
+    {% for yarn in yarn %}
+      <div class="card-content">
+        <!--yarn image-->
+        <div class="media">
+          <div class="media-left">
+            <figure class="yarn-photo">
+              <img src="static/images/balls-of-wool.jpg" alt="photo of three balls of wool with a crochet hook">
+            </figure>
           </div>
-          <nav class="level">
-            <div class="level-left">
-              <div class="level-item">
-                <a class="button is-primary">Submit</a>
-              </div>
-            </div>
-          </nav>
+          <!--yarn name and subtitile-->
+          <div class="media-content">
+            <p class="title is-4">Yarn Name: {{ yarn.yarn_name }}</p>
+            <p class="subtitle is-6">By {{ yarn.yarn_producer }}</p>
+            <p>Yarn weight: {{ yarn.yarn_weight }}</p>
+            <p>Yarn colour: {{ yarn.yarn_colour }}</p>
+          </div>
         </div>
-      </article>
-    </div>
-  {% endblock %}
-  </div>
+        <!--Yarn review-->
+        <div class="content">
+          <p class="title is-4">Review</p>
+          <p>{{ yarn.yarn_review }}</p>
+          {% endfor %}
+        </div>
+    {% endblock %}
+
+</div>
+
 
