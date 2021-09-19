@@ -106,6 +106,11 @@ def yarns():
     return render_template("pages/yarns.html", yarn=yarn)
 
 
+@app.route("/add_yarn")
+def add_yarn():
+    return render_template("pages/addyarn.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
         port=int(os.environ.get("PORT")),
