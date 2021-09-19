@@ -131,6 +131,15 @@ I chose to use MongoDB for my database and set it up with the following collecti
 | username | string |
 | password | string |
 
+### Yarns
+
+| Key | Value |
+|---- | ----- |
+| _id | ObjectId |
+| yarn_name | string |
+| yarn_producer | string |
+| 
+
 
 
 [Back to Top](#table-of-contents)
@@ -195,7 +204,9 @@ There will be a form to fill in to create a username and password. When the form
 #### Results
 After a giltch with the connection with Mongo URI this function is now fully working I have tested it by setting up usernames and also by trying to set up an account with an exicstung username to check that the messages are correctly shown for the user.
 
-### Login
+### Login/ Log out functionality
+#### Plan
+The user will be able to login to the site as well as logout when finished using the site.
 
 
 
