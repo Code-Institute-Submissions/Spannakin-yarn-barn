@@ -52,8 +52,8 @@ h2 {
 }
 
 #site-logo-full {
-    height:auto;
-    width:auto;
+    height: auto;
+    width: auto;
 }
 
 /* home page */
@@ -70,7 +70,7 @@ h2 {
 }
 
 #subheading {
-    padding: 10px;
+    padding: 1rem;
 }
 
 
