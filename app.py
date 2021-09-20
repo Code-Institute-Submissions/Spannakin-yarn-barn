@@ -134,7 +134,7 @@ def edit_yarn(yarn_id):
             "yarn_review": request.form.get("yarn_review"),
             "created_by": session["user"]
         }
-        mongo.db.yarn.update({"_id": ObjectId(yarn_id)})
+        mongo.db.yarn.update({"_id": ObjectId(yarn_id)}, yarn)
         flash("Yarn Successfully Updated")
 
     yarn = mongo.db.yarn.find_one({"_id": ObjectId(yarn_id)})
