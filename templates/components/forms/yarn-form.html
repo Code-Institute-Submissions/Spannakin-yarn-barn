@@ -1,5 +1,9 @@
 <div class="container">
+{% if add_yarn == True %}
 <form method="POST" action="{{ url_for('add_yarn')}}">
+    {% else %}
+    <form method="POST" action="{{ url_for('edit_yarn', yarn_id=yarn._id)}}"></form>
+{% endif %}
     <!--yarn name field-->
     <div class="field">
         <label class="label" for="yarn_name">Yarn Name</label>
@@ -26,9 +30,9 @@
     </div>
     <!--yarn colour-->
     <div class="field">
-        <label class="label" for="yarn_weight">Yarn Colour</label>
+        <label class="label" for="yarn_colour">Yarn Colour</label>
         <div class="control">
-            <input id="yarn_weight" name="yarn_weight" minlength="5" maxlength="50"
+            <input id="yarn_colour" name="yarn_colour" minlength="3" maxlength="50"
             type="text" class="validate" required>
         </div>
     </div>
