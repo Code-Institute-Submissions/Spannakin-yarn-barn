@@ -4,7 +4,7 @@
 :root {
     --border-color:#F6BD60;
     --green:#28a745;
-    --btn-color:#274c77;
+    --delete-color: red;
     --text-color:#5f788d;
     --background-color:#F28428;
     
@@ -85,4 +85,9 @@ h2 {
 .yarn-photo {
     width: 10rem;
     height: 10rem;
+}
+
+#delete-button {
+    background-color: var(--delete-color);
+
 }
