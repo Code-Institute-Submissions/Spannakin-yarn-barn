@@ -1,43 +1,42 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="{{url_for('home')}}">
-        <img src="static/images/yarn-logo.jpg" class="site-logo" alt="site logo">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="{{ url_for('home')}}">
+      <img src="" >
+    </a>
+
+    <a role="button" class="navbar-burger" id="burger">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="navbar-menu" id="navbar-menu">
+    <div class="navbar-start">
+      <a href="{{ url_for('home')}}" class="navbar-item">
+        Home
       </a>
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true">
-          <a href="{{ url_for('home')}}"> Home</a>
-        </span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
+
+      <a href="{{ url_for('yarns')}}" class="navbar-item">
+        Yarns
+      </a>
+
+      <a href="{{ url_for('add_yarn')}}" class="navbar-item">
+        Add a Yarn
       </a>
     </div>
-  
-    <div id="navbar-full" class="navbar-menu">
-      <div class="navbar-start">
-        <a href="{{ url_for('home')}}" class="navbar-item">
-          Home
-        </a>
 
-        <a href="{{ url_for('yarns')}}" class="navbar-item">
-          Yarns
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a href="{{ url_for('register')}}" class="button is-primary">
+            <strong>Sign up</strong>
           </a>
-        
-        <a href="{{ url_for('add_yarn')}}" class="navbar-item">
-          Add a Yarn
+          <a href="{{ url_for('logout')}}" class="button is-light">
+            Log out
           </a>
-      </div>
-    
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a href="{{ url_for('register')}}" class="button is-primary">
-              <strong>Sign up</strong>
-            </a>
-            <a href="{{ url_for('logout')}}" class="button is-light">
-              Log out
-            </a>
-          </div>
         </div>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>

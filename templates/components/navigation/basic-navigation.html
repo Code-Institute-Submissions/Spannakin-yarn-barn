@@ -1,24 +1,5 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar is-spaced is-fixed-top" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="{{ url_for('home')}}">
-      <img src="static/images/yarn-logo.jpg" class="site-logo" id="site-logo-full"alt="site logo">
-    </a>
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
-      <span aria-hidden="true" href="{{ url_for('home')}}"></span>
-      <span aria-hidden="true" href="{{ url_for('register')}}"></span> 
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbar-full" class="navbar-menu">
-    <div class="navbar-start">
-      <a href="{{ url_for('home')}}" class="navbar-item">
-        Home
-      </a>
-      <a href="{{ url_for('yarns')}}" class="navbar-item"></a>
-    </div>
-  
-    <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
           <a href="{{ url_for('register')}}" class="button is-primary">
@@ -30,5 +11,7 @@
         </div>
       </div>
     </div>
-  </div>
 </nav>
+
+    
+  
