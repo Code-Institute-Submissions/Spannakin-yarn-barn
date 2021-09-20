@@ -19,6 +19,9 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def home():
+    """
+    function to load the home page
+    """
     return render_template("pages/home.html")
 
 
@@ -27,7 +30,7 @@ def register():
     """
     Function to check if username exists in database
     if username exists user is redirected to the signin screen
-    or a message is shown that registration is successful. 
+    or a message is shown that registration is successful 
     """
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
@@ -83,6 +86,10 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    """
+    Function to render the profile page for a user
+    If unsuccessful the user is redirected to the login page
+    """
     username = mongo.db.users.find_one(
     {"username": session["user"]})["username"] 
 
@@ -94,7 +101,11 @@ def profile(username):
 
 @app.route("/logout")
 def logout():
-    # remove user from session cookie
+    """
+    Function to log user out of account
+    this ends the session cokkies
+    once logged out the user is redirected to the home page
+    """
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("home"))
@@ -102,12 +113,23 @@ def logout():
 
 @app.route("/yarns", methods=["GET", "POST"])
 def yarns():
+    """
+    function to render the yarn lists
+    information on each yarn is retreived from the database
+    each yarn is added to its own card
+    """
     yarn = list(mongo.db.yarn.find())
     return render_template("pages/yarns.html", yarn=yarn)
 
 
 @app.route("/add_yarn", methods=["GET", "POST"])
 def add_yarn():
+    """
+    Function that allows the user to add a new yarn to the database
+    a form allows the user to add the information about a yarn in the correct
+    format for the database.
+    A message is shown to the user to see that their submission has been successful
+    """
     if request.method == "POST":
         yarn = {
             "yarn_name": request.form.get("yarn_name"),
@@ -125,6 +147,12 @@ def add_yarn():
 
 @app.route("/edit_yarn/<yarn_id>", methods=["GET", "POST"])
 def edit_yarn(yarn_id):
+    """
+    Function that allows the user to edit a yarn in the database
+    a form allows the user to add the information about a yarn in the correct
+    format for the database.
+    A message is shown to the user to see that their submission has been successful
+    """
     if request.method == "POST":
         yarn = {
             "yarn_name": request.form.get("yarn_name"),
@@ -143,6 +171,10 @@ def edit_yarn(yarn_id):
 
 @app.route("/delete_yarn/<yarn_id>", methods=["GET", "POST"])
 def delete_yarn(yarn_id):
+    """
+    Function to delete a yarn from the database
+    A message is shown to the user to show that the deletion has been successful
+    """
     mongo.db.yarn.remove({"_id": ObjectId(yarn_id)})
     flash("Yarn Successfully Deleted")
     return redirect(url_for("yarns"))
