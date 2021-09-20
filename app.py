@@ -111,7 +111,7 @@ def add_yarn():
     if request.method == "POST":
         yarn = {
             "yarn_name": request.form.get("yarn_name"),
-            "yarn_description": request.form.get("yarn_description"),
+            "yarn_producer": request.form.get("yarn_producer"),
             "yarn_weight": request.form.get("yarn_weight"),
             "yarn_colour": request.form.get("yarn_colour"),
             "yarn_review": request.form.get("yarn_review"),
@@ -122,6 +122,11 @@ def add_yarn():
         return redirect(url_for("yarns"))
 
     return render_template("pages/addyarn.html")
+
+
+@app.route("/edit_yarn/<yarn_id>", methods=["GET", "POST"])
+def edit_yarn(yarn_id):
+    return render_template("pages/edit-yarn.html")
 
 
 if __name__ == "__main__":
