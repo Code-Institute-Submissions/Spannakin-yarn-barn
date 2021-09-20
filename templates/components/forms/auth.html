@@ -43,7 +43,7 @@
       {% endif %}
       <div class="column is-half">
         {% if register == True %}
-          <a href="{{ url_for('sign_in') }}" class="form-buttons">Click here to Login</a>
+          <a href="{{ url_for('login') }}" class="form-buttons">Click here to Login</a>
           {% else %}
           <a href="{{ url_for('register') }}" class="form-buttons">Click here to Sign Up</a>
         {% endif %}
