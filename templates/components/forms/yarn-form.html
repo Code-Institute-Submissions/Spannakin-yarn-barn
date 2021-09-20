@@ -1,4 +1,6 @@
+<div class="container">
 <form method="POST" action="">
+    <!--yarn name field-->
     <div class="field">
         <label class="label" for="yarn_name">Yarn Name</label>
         <div class="control">
@@ -6,7 +8,7 @@
             type="text" class="validate" required>
         </div>
     </div>
-
+    <!-- yarn producer-->
     <div class="field">
         <label class="label" for="yarn_producer">Made By</label>
         <div class="control">
@@ -14,14 +16,35 @@
             type="text" class="validate" required>
         </div>
     </div>
-
+    <!-- yarn weight-->
     <div class="field">
-        <label class="label" for="yarn_producer">Made By</label>
+        <label class="label" for="yarn_weight">Made By</label>
         <div class="control">
-            <input id="yarn_producer" name="yarn_producer" minlength="5" maxlength="50"
+            <input id="yarn_weight" name="yarn_weight" minlength="5" maxlength="50"
             type="text" class="validate" required>
         </div>
     </div>
-
-
+    <!--yarn colour-->
+    <div class="field">
+        <label class="label" for="yarn_weight">Made By</label>
+        <div class="control">
+            <input id="yarn_weight" name="yarn_weight" minlength="5" maxlength="50"
+            type="text" class="validate" required>
+        </div>
+    </div>
+    <!--yarn review-->
+    <div class="field">
+        <label class="label" for="yarn_review">Yarn Review</label>
+        <div class="control">
+            <textarea class="textarea" id="yarn_review" name="yarn_review" minlength="5" maxlength="50"
+            type="text" class="validate" required></textarea>
+        </div>
+    </div>
+    <!--submit button-->
+    <div class="field is-grouped">
+        <div class="control">
+            <button class="button is-primary">Submit</button>
+        </div>
+    </div>
 </form>
+</div>
