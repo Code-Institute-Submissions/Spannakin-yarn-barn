@@ -106,8 +106,21 @@ def yarns():
     return render_template("pages/yarns.html", yarn=yarn)
 
 
-@app.route("/add_yarn")
+@app.route("/add_yarn", methods=["GET", "POST"])
 def add_yarn():
+    if request.method == "POST":
+        yarn = {
+            "yarn_name": request.form.get("yarn_name"),
+            "yarn_description": request.form.get("yarn_description"),
+            "yarn_weight": request.form.get("yarn_weight"),
+            "yarn_colour": request.form.get("yarn_colour"),
+            "yarn_review": request.form.get("yarn_review"),
+            "created_by": session["user"]
+        }
+        mongo.db.yarn.insert_one(yarn)
+        flash("Yarn Successfully Added to the Library")
+        return redirect(url_for("yarns"))
+
     return render_template("pages/addyarn.html")
 
 
