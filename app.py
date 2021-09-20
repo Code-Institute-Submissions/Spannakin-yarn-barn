@@ -50,7 +50,7 @@ def register():
         flash("Registration Successful!")
         return redirect(url_for(
             "profile", username=session["user"]))
-    return render_template("pages/signin.html")
+    return render_template("pages/signin.html", register=True)
 
 
 @app.route("/login", methods=["GET", "POST"])
