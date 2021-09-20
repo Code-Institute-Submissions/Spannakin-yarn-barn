@@ -3,6 +3,11 @@
     <a class="navbar-item" href="{{ url_for('home')}}">
       <img src="static/images/yarn-logo.jpg" class="site-logo" id="site-logo-full"alt="site logo">
     </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+      <span aria-hidden="true" href="{{ url_for('home')}}"></span>
+      <span aria-hidden="true" href="{{ url_for('register')}}"></span> 
+      <span aria-hidden="true"></span>
+    </a>
   </div>
 
   <div id="navbar-full" class="navbar-menu">
