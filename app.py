@@ -30,7 +30,7 @@ def register():
     """
     Function to check if username exists in database
     if username exists user is redirected to the signin screen
-    or a message is shown that registration is successful 
+    or a message is shown that registration is successful
     """
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
@@ -69,10 +69,10 @@ def login():
         if existing_user:
             if check_password_hash(
                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
-                    return redirect(url_for(
-                            "profile", username=session["user"]))
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("login"))
@@ -91,11 +91,11 @@ def profile(username):
     If unsuccessful the user is redirected to the login page
     """
     username = mongo.db.users.find_one(
-    {"username": session["user"]})["username"] 
+        {"username": session["user"]})["username"]
 
     if session["user"]:
         return render_template("pages/profile.html", username=username)
-    
+
     return redirect(url_for("login"))
 
 
@@ -122,13 +122,14 @@ def yarns():
     return render_template("pages/yarns.html", yarn=yarn)
 
 
-@app.route("/add_yarn", methods=["GET", "POST"])
+@app.route("/add/yarn", methods=["GET", "POST"])
 def add_yarn():
     """
     Function that allows the user to add a new yarn to the database
     a form allows the user to add the information about a yarn in the correct
     format for the database.
-    A message is shown to the user to see that their submission has been successful
+    A message is shown to the user to see
+    that their submission has been successful
     """
     if request.method == "POST":
         yarn = {
@@ -145,25 +146,30 @@ def add_yarn():
     return render_template("pages/addyarn.html", add_yarn=True)
 
 
-@app.route("/edit_yarn/<yarn_id>", methods=["GET", "POST"])
+@app.route("/edit/yarn/<yarn_id>", methods=["GET", "POST"])
 def edit_yarn(yarn_id):
     """
     Function that allows the user to edit a yarn in the database
     a form allows the user to add the information about a yarn in the correct
     format for the database.
-    A message is shown to the user to see that their submission has been successful
+    A message is shown to the user to see
+    that their submission has been successful
     """
     if request.method == "POST":
-        yarn = {
-            "yarn_name": request.form.get("yarn_name"),
-            "yarn_producer": request.form.get("yarn_producer"),
-            "yarn_weight": request.form.get("yarn_weight"),
-            "yarn_colour": request.form.get("yarn_colour"),
-            "yarn_review": request.form.get("yarn_review"),
-            "created_by": session["user"]
-        }
-        mongo.db.yarn.update({"_id": ObjectId(yarn_id)}, yarn)
-        flash("Yarn Successfully Updated")
+        yarn_createdby = mongo.db.yarn.find_one({"_id": ObjectId(yarn_id)})
+        if session["user"] == yarn_createdby["created_by"]:
+            yarn = {
+                "yarn_name": request.form.get("yarn_name"),
+                "yarn_producer": request.form.get("yarn_producer"),
+                "yarn_weight": request.form.get("yarn_weight"),
+                "yarn_colour": request.form.get("yarn_colour"),
+                "yarn_review": request.form.get("yarn_review"),
+                "created_by": session["user"]
+            }
+            mongo.db.yarn.update({"_id": ObjectId(yarn_id)}, yarn)
+            flash("Yarn Successfully Updated")
+        else:
+            flash("Not authorised to update this yarn")
 
     yarn = mongo.db.yarn.find_one({"_id": ObjectId(yarn_id)})
     return render_template("pages/edit-yarn.html/", yarn=yarn)
@@ -173,15 +179,19 @@ def edit_yarn(yarn_id):
 def delete_yarn(yarn_id):
     """
     Function to delete a yarn from the database
-    A message is shown to the user to show that the deletion has been successful
+    A message is shown to the user to show that
+    the deletion has been successful
     """
-    mongo.db.yarn.remove({"_id": ObjectId(yarn_id)})
-    flash("Yarn Successfully Deleted")
+    yarn_createdby = mongo.db.yarn.find_one({"_id": ObjectId(yarn_id)})
+    if session["user"] == yarn_createdby["created_by"]:
+        mongo.db.yarn.remove({"_id": ObjectId(yarn_id)})
+        flash("Yarn Successfully Deleted")
+    else:
+        flash("Not authorised to delete this yarn")
     return redirect(url_for("yarns"))
-    
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
-        port=int(os.environ.get("PORT")),
-        debug=os.environ.get("DEBUG"))
-
+            port=int(os.environ.get("PORT")),
+            debug=os.environ.get("DEBUG"))
