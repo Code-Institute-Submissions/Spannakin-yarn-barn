@@ -119,15 +119,34 @@ def add_yarn():
         }
         mongo.db.yarn.insert_one(yarn)
         flash("Yarn Successfully Added to the Library")
-        return redirect(url_for("yarns"))
 
-    return render_template("pages/addyarn.html")
+    return render_template("pages/addyarn.html", add_yarn=True)
 
 
 @app.route("/edit_yarn/<yarn_id>", methods=["GET", "POST"])
 def edit_yarn(yarn_id):
-    return render_template("pages/edit-yarn.html")
+    if request.method == "POST":
+        yarn = {
+            "yarn_name": request.form.get("yarn_name"),
+            "yarn_producer": request.form.get("yarn_producer"),
+            "yarn_weight": request.form.get("yarn_weight"),
+            "yarn_colour": request.form.get("yarn_colour"),
+            "yarn_review": request.form.get("yarn_review"),
+            "created_by": session["user"]
+        }
+        mongo.db.yarn.update({"_id": ObjectId(yarn_id)})
+        flash("Yarn Successfully Updated")
 
+    yarn = mongo.db.yarn.find_one({"_id": ObjectId(yarn_id)})
+    return render_template("pages/edit-yarn.html/", yarn=yarn)
+
+
+@app.route("/delete_yarn/<yarn_id>", methods=["GET", "POST"])
+def delete_yarn(yarn_id):
+    mongo.db.yarn.remove({"_id": ObjectId(yarn_id)})
+    flash("Yarn Successfully Deleted")
+    return redirect(url_for("yarns"))
+    
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
