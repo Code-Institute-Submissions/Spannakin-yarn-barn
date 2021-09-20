@@ -3,8 +3,8 @@
 {% include 'components/navigation/full-navigation.html' %}
 <div class= "container is-fluid">
   <h1>Yarn Barn</h1>
+  {% for yarn in yarn %}
   <div class="card">
-    {% for yarn in yarn %}
       <div class="card-content">
         <!--yarn image-->
         <div class="media">
@@ -25,9 +25,12 @@
         <div class="content">
           <p class="title is-4">Review</p>
           <p>{{ yarn.yarn_review }}</p>
-          {% endfor %}
         </div>
-    {% endblock %}
+      </div>
+  </div>
+  {% endfor %}
 </div>
+{% endblock %}
+
 
 
