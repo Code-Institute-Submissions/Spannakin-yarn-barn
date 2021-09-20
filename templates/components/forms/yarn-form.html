@@ -1,5 +1,5 @@
 <div class="container">
-<form method="POST" action="">
+<form method="POST" action="{{ url_for('add_yarn')}}">
     <!--yarn name field-->
     <div class="field">
         <label class="label" for="yarn_name">Yarn Name</label>
@@ -18,7 +18,7 @@
     </div>
     <!-- yarn weight-->
     <div class="field">
-        <label class="label" for="yarn_weight">Made By</label>
+        <label class="label" for="yarn_weight">Yarn Weight</label>
         <div class="control">
             <input id="yarn_weight" name="yarn_weight" minlength="5" maxlength="50"
             type="text" class="validate" required>
@@ -26,7 +26,7 @@
     </div>
     <!--yarn colour-->
     <div class="field">
-        <label class="label" for="yarn_weight">Made By</label>
+        <label class="label" for="yarn_weight">Yarn Colour</label>
         <div class="control">
             <input id="yarn_weight" name="yarn_weight" minlength="5" maxlength="50"
             type="text" class="validate" required>
@@ -36,7 +36,7 @@
     <div class="field">
         <label class="label" for="yarn_review">Yarn Review</label>
         <div class="control">
-            <textarea class="textarea" id="yarn_review" name="yarn_review" minlength="5" maxlength="50"
+            <textarea class="textarea" id="yarn_review" name="yarn_review" minlength="5" maxlength="1000"
             type="text" class="validate" required></textarea>
         </div>
     </div>
