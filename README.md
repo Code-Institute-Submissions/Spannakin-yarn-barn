@@ -40,9 +40,8 @@ Have you ever wondered what yarn is going to be best for your next project? Is a
 ### User Stories
 
 * As a user, I want to be able to easily navigate the site
-* As a user, I want to be able to search yarns by weight and color
 * As a user, I want to be able to leave a review of a yarn that I have worked with to help other crafters.
-* As a user, I want to be able to register for and account
+* As a user, I want to be able to register for an account
 * As a user, I want to be able to log in and out of the site to leave reviews.
 * As a user, I want to be able to add yarns to the library.
  
@@ -64,11 +63,9 @@ Have you ever wondered what yarn is going to be best for your next project? Is a
 I used [coolers](https://coolors.co/) to help select a color palette for the site.
 I selected a variety of bright pastel colors as it is calming yet engaging at the same time.
 
-![Color Palette](images/YarnBarnColourPalette.png)
-
 * Color #F28428 will be used as the main background color
 * Color #84A59D will be used for the nav bar as it is in high contrast to the main page color
-* Color #F6BD60 will be used as a border color to highlight images and taxt areas
+* Color #F6BD60 will be used as a border color to highlight images and text areas
 
 ### Fonts
 
@@ -162,8 +159,9 @@ I chose to use MongoDB for my database and set it up with the following collecti
 ### Features to be implemented 
 
 * an 'About me' section on the profile page
+* a search function to look up particualr producers or yarn types.
 * the ability to like/favourite yrans that you can then see in your profile so be able to refer back to them
-* a where to buy fo yarns
+* a where to buy yarns from section
 
 [Back to Top](#table-of-contents)
 
@@ -200,6 +198,11 @@ I chose to use MongoDB for my database and set it up with the following collecti
 
 ## Testing
 
+### As a user, I want to be able to easily navigate the site
+#### Navbar
+
+
+### As a user, I want to be able to register for an account
 ### Registration/ Sign Up
 #### Plan
 There will be a form to fill in to create a username and password. When the form is filled in correctly then there will be a flash message for the user to show succes and they will be redirected to their profile page. If the username already exists the user will be shown a message to say that name is already in user and redirected to the sign up page to choose another one.
@@ -207,22 +210,38 @@ There will be a form to fill in to create a username and password. When the form
 #### Results
 After a giltch with the connection with Mongo URI this function is now fully working I have tested it by setting up usernames and also by trying to set up an account with an exicstung username to check that the messages are correctly shown for the user.
 
+
+### As a user, I want to be able to log in and out of the site to leave reviews.
 ### Login/ Log out functionality
 #### Plan
 The user will be able to login to the site as well as logout when finished using the site.
 
 #### Results
-There are clear buttong in the navbar to log in and out of the site, both functions work correctly and have been tested by myself and others to access accounts created.
+There are clear buttons in the navbar to log in and out of the site, both functions work correctly and have been tested by myself and others to access accounts created.
 
+### As a user, I want to be able to add yarns to the library.
+### Add a Yarn
+#### Plan
+The user will be able to add new yarns to the library.
+
+#### Results
+In the navbar there is a link to the form to fill in with infromation about a yarn that a user wants to add to the library.
+I have tested that the function pushes the infromation to the database and other users have added yarns to the library as well.
 ### Update Yarn
 #### Plan
 Users should be able to update yarn records with additional information or corrections to information on the cards.
 
-#### Resluts
+#### Results
+
+There is an edit button on each yarn card so that the user can update yarns with ne information or correct any information that is incorrect. This has been tested by myself and other users.
 
 ### Delete A Yarn
 #### Plan
-Users can delete a yarn
+Users can delete a yarn.
+
+#### Results
+There is now a function to delete yarns from the library wich I have tested. This may need revisiting in the future if it's misused by users. But as this is a small application for a small crafting group it's helpful that all users can add and remove yarns from the library.
+
 
 
 
@@ -238,7 +257,7 @@ The login function was not redirevting through to the profile page, this was due
 ### Adding a new yarn
 Whilst the function was working the yarn producer name was not pulling through from the database, on closer insepction of my code I found that I had misspelt the key name so corrected this and then all the infromation was moving to and from the database correcty.
 
-
+### Navbar
 
 [Back to Top](#table-of-contents)
 ## Deployment
@@ -346,7 +365,7 @@ To clone the project:
 
 [Back to Top](#table-of-contents)
 ## Credits
-Thanks as always to Simen [Eventyret_mentor](https://github.com/Eventyret) who has helped me through this project with helpful and insightful tips on what I've been trying to make! Thanks also to the awesome [Code Institute](https://codeinstitute.net/) tutors who are there for you when ever you get stuck along the way.
+Thanks as always to Simen [Eventyret_mentor](https://github.com/Eventyret) who has helped me through this project with helpful and insightful tips on what I've been trying to make! Thanks also to the awesome [Code Institute](https://codeinstitute.net/) tutors (especially Johann, who are there for you when ever you get stuck along the way.
 Thanks to [Unsplash](https://unsplash.com/)for making their images available.
 Thanks to the [Stackoverflow](https://stackoverflow.com/) for a great community always happy to help.
 My family and friends have been a huge support in this this project as I may have overcommitted myself so Thanks for letting me bailout to go write code!
