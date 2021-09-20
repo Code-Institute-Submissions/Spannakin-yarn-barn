@@ -2,7 +2,7 @@
 {% if add_yarn == True %}
 <form method="POST" action="{{ url_for('add_yarn')}}">
     {% else %}
-    <form method="POST" action="{{ url_for('edit_yarn', yarn_id=yarn._id)}}"></form>
+    <form method="POST" action="{{ url_for('edit_yarn', yarn_id=yarn._id)}}">
 {% endif %}
     <!--yarn name field-->
     <div class="field">
