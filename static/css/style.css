@@ -73,13 +73,13 @@ h2 {
     padding: 1rem;
 }
 
-
-
-
 /*yarns page */
 
 .card {
     background-color: var(--border-color);
+    padding: 1rem;
+    border: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 .yarn-photo {
