@@ -222,6 +222,11 @@ When writing this function its initially wouldn't work despite the Python code b
 ### Login function
 The login function was not redirevting through to the profile page, this was due to an error in my coding where I had forgotten to pass in the username perameter to the redirect function. It now works fine.
 
+### Adding a new yarn
+Whilst the function was working the yarn producer name was not pulling through from the database, on closer insepction of my code I found that I had misspelt the key name so corrected this and then all the infromation was moving to and from the database correcty.
+
+
+
 [Back to Top](#table-of-contents)
 ## Deployment
 
