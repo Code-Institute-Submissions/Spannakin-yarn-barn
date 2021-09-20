@@ -211,6 +211,19 @@ After a giltch with the connection with Mongo URI this function is now fully wor
 #### Plan
 The user will be able to login to the site as well as logout when finished using the site.
 
+#### Results
+There are clear buttong in the navbar to log in and out of the site, both functions work correctly and have been tested by myself and others to access accounts created.
+
+### Update Yarn
+#### Plan
+Users should be able to update yarn records with additional information or corrections to information on the cards.
+
+#### Resluts
+
+### Delete A Yarn
+#### Plan
+Users can delete a yarn
+
 
 
 [Back to Top](#table-of-contents)
@@ -333,8 +346,10 @@ To clone the project:
 
 [Back to Top](#table-of-contents)
 ## Credits
-Simen
-Family and Friends
+Thanks as always to Simen [Eventyret_mentor](https://github.com/Eventyret) who has helped me through this project with helpful and insightful tips on what I've been trying to make! Thanks also to the awesome [Code Institute](https://codeinstitute.net/) tutors who are there for you when ever you get stuck along the way.
+Thanks to [Unsplash](https://unsplash.com/)for making their images available.
+Thanks to the [Stackoverflow](https://stackoverflow.com/) for a great community always happy to help.
+My family and friends have been a huge support in this this project as I may have overcommitted myself so Thanks for letting me bailout to go write code!
 
 [Back to Top](#table-of-contents)
 
