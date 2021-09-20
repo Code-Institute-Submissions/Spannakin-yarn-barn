@@ -4,7 +4,7 @@
 :root {
     --background-color:#F28428;
     --border-color:#F6BD60;
-    --text-color:#5f788d;
+    --text-color:#2b3842;
     --delete-color: red;
     --title-font: "Amatic SC", Arial, Helvetica, sans-serif;
     --body-font: "Roboto", Arial, Helvetica, sans-serif ;
@@ -30,7 +30,8 @@ h1 {
     font-size: 3rem;
     font-weight: 900;
     text-align: center;
-    padding: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
 }
 
 h2 {
@@ -72,7 +73,11 @@ h2 {
 }
 
 #welcome-text {
-    text-align: center;
+    background-color: var(--background-color);
+    text-align:center;
+    padding: 1rem;
+    margin:1rem;
+    
 }
 
 #subheading {
