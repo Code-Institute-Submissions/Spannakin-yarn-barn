@@ -5,7 +5,7 @@
 
   <h1>Yarn Barn</h1>
 
-  {% if login == True %}
+{% if login == True %}
   <h2>Login</h2>
   {% include 'components/forms/auth.html' %}
 
@@ -13,6 +13,6 @@
   <h2>Sign Up</h2>
   {% include 'components/forms/auth.html' %}
 
-  {% endif %}
+{% endif %}
 
 {% endblock %}
