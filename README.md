@@ -138,7 +138,10 @@ I chose to use MongoDB for my database and set it up with the following collecti
 | _id | ObjectId |
 | yarn_name | string |
 | yarn_producer | string |
-| 
+| yarn_weight | string |
+| yarn_colour | string |
+| yarn_review | string |
+| created_by | string |
 
 
 
@@ -152,7 +155,7 @@ I chose to use MongoDB for my database and set it up with the following collecti
     * CREATE: create a review/comment about a yarn and add it to the database.
     * READ: look up and read about yarns in the library.
     * UPDATE: Add reviews/ comments to existing yarns.
-    * DELETE: Delete a review/ comment and the Admin can delete a yarn entirely.
+    * DELETE: Delete a yarn entirely.
 
 
 [Back to Top](#table-of-contents)
