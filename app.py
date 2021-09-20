@@ -81,7 +81,7 @@ def login():
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
-    return render_template("pages/signin.html", login = True)
+    return render_template("pages/signin.html", login=True)
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
