@@ -1,5 +1,5 @@
 # Yarn Barn
-
+![Mock-up of site](static/images/mock-up.png)
 ## Goal for this Project
 
 Have you ever wondered what yarn is going to be best for your next project? Is a yarn value for money? How easy is a yarn to work with? Well look no further as at Yarn barn you can search an review yarns to make a more informed decision on the yarn for your next project.
@@ -62,6 +62,8 @@ Have you ever wondered what yarn is going to be best for your next project? Is a
 
 I used [coolers](https://coolors.co/) to help select a color palette for the site.
 I selected a variety of bright pastel colors as it is calming yet engaging at the same time.
+
+![color palette](static/images/YarnBarnColourPalette.png)
 
 * Color #F28428 will be used as the main background color
 * Color #84A59D will be used for the nav bar as it is in high contrast to the main page color
