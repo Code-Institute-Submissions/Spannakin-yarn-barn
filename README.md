@@ -55,7 +55,9 @@ Have you ever wondered what yarn is going to be best for your next project? Is a
 
 ### Expectations
 
-* 
+* An easy to navigate site
+* Yarn reviews on a variety of yarns
+* Ability to add the the library of yarns
 
 [Back to Top](#table-of-contents)
 ## Design Choices
@@ -69,6 +71,7 @@ I selected a variety of bright pastel colors as it is calming yet engaging at th
 * Color #84A59D will be used for the nav bar as it is in high contrast to the main page color
 * Color #F6BD60 will be used as a border color to highlight images and text areas
 
+Ultimately I decided against using the ligh pink colours and stayed with the bolder oranges and greens keeping the site bright and fun. Over time the colour might change seasonally but the oranges reflect the summer/ autumn season that we are currently in.
 ### Fonts
 
 I have used [Google Fonts](https://fonts.google.com/) for  the fonts used for this site, I have chosen AmaticSC for the Title font and Roboto for the main text used.
@@ -178,10 +181,10 @@ I chose to use MongoDB for my database and set it up with the following collecti
 
 ### Libraries and Frameworks
 
-* Google Fonts
-* Font Awesome
-* Bulma
-* Coolers
+* [Google Fonts](https://fonts.google.com/)
+* [Font Awesome](https://fontawesome.com/)
+* [Bulma](https://bulma.io/)
+* [Coolers](https://coolors.co/)
 * Flask
 * PyMongo
 * Jinja
@@ -202,7 +205,12 @@ I chose to use MongoDB for my database and set it up with the following collecti
 
 ### As a user, I want to be able to easily navigate the site
 #### Navbar
+#### Plan
+The navbar can be seen on larger screens but on small screens is too crowded so will have a burger dropdown menu.
 
+#### Results
+The burger element of the navbar was trickier to implement than I initially realised buut ultimatley works well, the burger on the small mobile screen size keeps the look of the site clean and consistent. All items from the nav appear in the dropdown menu so all functionality is available on small devices as well as large screens.
+the nav bar keeps all the navigation elements in one place so the user will be able to move through the site with ease.
 
 ### As a user, I want to be able to register for an account
 ### Registration/ Sign Up
@@ -218,7 +226,6 @@ During Testing I also found that I had forgotten to add the required class to th
 ### Login/ Log out functionality
 #### Plan
 The user will be able to login to the site as well as logout when finished using the site.
-
 #### Results
 There are clear buttons in the navbar to log in and out of the site, both functions work correctly and have been tested by myself and others to access accounts created.
 
@@ -226,51 +233,38 @@ There are clear buttons in the navbar to log in and out of the site, both functi
 ### Add a Yarn
 #### Plan
 The user will be able to add new yarns to the library.
-
 #### Results
 In the navbar there is a link to the form to fill in with infromation about a yarn that a user wants to add to the library.
 I have tested that the function pushes the infromation to the database and other users have added yarns to the library as well.
 ### Update Yarn
 #### Plan
 Users should be able to update yarn records with additional information or corrections to information on the cards.
-
 #### Results
-
 There is an edit button on each yarn card so that the user can update yarns with ne information or correct any information that is incorrect. But I then decided that it would be better if the user could only update records that they had created, as a security measure so that a user couldn't log in and just change every record. This has been tested by myself and other users.
 
 ### Delete A Yarn
 #### Plan
 Users can delete a yarn.
 This was an additional function that I decided to add in case a yarn was discontinued.
-
 #### Results
 There is now a function to delete yarns from the library wich I have tested. As with the edit function a user can only edit or delete a yarn that they created. This means that a user caouln't just ogin and delete all the record in the library.
 
-
-
-
 [Back to Top](#table-of-contents)
 ## Bugs
-
 ### Registration/sign in function
 When writing this function its initially wouldn't work despite the Python code being correct after searching through the code, with the help of a Tutor as second set of eyes we found that the password in the MONG_URI was not working so I reset the password for the admin and linked it up again. After this the registration function worked correctly and new users were saved to the database.
-
 ### Login function
 The login function was not redirevting through to the profile page, this was due to an error in my coding where I had forgotten to pass in the username perameter to the redirect function. It now works fine.
-
 ### Adding a new yarn
 Whilst the function was working the yarn producer name was not pulling through from the database, on closer insepction of my code I found that I had misspelt the key name so corrected this and then all the infromation was moving to and from the database correcty.
-
 ### Navbar
 Hamburger icon was not working. This was due to an error in the javascript that I had written for it I had passed the element the wrong id, once this was corrected then the function workd.
 This then threw another glitch as it was showing an error on the home page where the burger was not present as such I wrapped the function within an if statement so that the function could only be called whe the burger was present on the page. 
-
 ### Heroku app not connected to Database
 During testing it came to light that the Heroku app was not connected to the Mongo database this was probably due to the earlier error with the Mongo URI in the registration function.To over come this I re-entered the details needed into the config vars and the app and database are now able to connect.
 
 [Back to Top](#table-of-contents)
 ## Deployment
-
 ### Local Deployment
 
 I have created the Dog Health Tracker project using Github, from there I used [Gitpod](https://gitpod.io/) to write my code. 
