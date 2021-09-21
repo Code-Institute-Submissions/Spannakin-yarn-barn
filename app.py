@@ -210,6 +210,7 @@ def server_error(error):
     return render_template('pages/error.html',
                            error_message=error_message), 500
 
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
