@@ -211,6 +211,7 @@ There will be a form to fill in to create a username and password. When the form
 
 #### Results
 After a giltch with the connection with Mongo URI this function is now fully working I have tested it by setting up usernames and also by trying to set up an account with an exicstung username to check that the messages are correctly shown for the user.
+During Testing I also found that I had forgotten to add the required class to the username and password fields meaning that if you hit the submit button and the firlds were empty the whole site crashed! After adding the needed fields the function works as expected.
 
 
 ### As a user, I want to be able to log in and out of the site to leave reviews.
@@ -235,14 +236,15 @@ Users should be able to update yarn records with additional information or corre
 
 #### Results
 
-There is an edit button on each yarn card so that the user can update yarns with ne information or correct any information that is incorrect. This has been tested by myself and other users.
+There is an edit button on each yarn card so that the user can update yarns with ne information or correct any information that is incorrect. But I then decided that it would be better if the user could only update records that they had created, as a security measure so that a user couldn't log in and just change every record. This has been tested by myself and other users.
 
 ### Delete A Yarn
 #### Plan
 Users can delete a yarn.
+This was an additional function that I decided to add in case a yarn was discontinued.
 
 #### Results
-There is now a function to delete yarns from the library wich I have tested. This may need revisiting in the future if it's misused by users. But as this is a small application for a small crafting group it's helpful that all users can add and remove yarns from the library.
+There is now a function to delete yarns from the library wich I have tested. As with the edit function a user can only edit or delete a yarn that they created. This means that a user caouln't just ogin and delete all the record in the library.
 
 
 
@@ -260,6 +262,11 @@ The login function was not redirevting through to the profile page, this was due
 Whilst the function was working the yarn producer name was not pulling through from the database, on closer insepction of my code I found that I had misspelt the key name so corrected this and then all the infromation was moving to and from the database correcty.
 
 ### Navbar
+Hamburger icon was not working. This was due to an error in the javascript that I had written for it I had passed the element the wrong id, once this was corrected then the function workd.
+This then threw another glitch as it was showing an error on the home page where the burger was not present as such I wrapped the function within an if statement so that the function could only be called whe the burger was present on the page. 
+
+### Heroku app not connected to Database
+During testing it came to light that the Heroku app was not connected to the Mongo database this was probably due to the earlier error with the Mongo URI in the registration function.To over come this I re-entered the details needed into the config vars and the app and database are now able to connect.
 
 [Back to Top](#table-of-contents)
 ## Deployment
