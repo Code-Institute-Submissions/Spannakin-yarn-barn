@@ -2,7 +2,7 @@
 <form method="POST" action="{{ url_for('login') }}">
   {% else %}
   <form method="POST" action="{{ url_for('register') }}">
-    {% endif %}
+{% endif %}
     <div class="field column is-half is-offset-one-quarter" id="email-input-login">
       <!--username input-->
       <label class="label" for="username">Username</label>
