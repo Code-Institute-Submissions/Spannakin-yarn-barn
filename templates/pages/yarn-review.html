@@ -19,11 +19,15 @@
       <p class="subtitle is-4">Review</p>
       <p>{{ yarn.yarn_review }}</p>
     </div>
+    <!-- edit/delete buttons-->
+    <div column is-mobile>
+      <a href="{{ url_for('edit_yarn', yarn_id=yarn._id) }}" class="button is-small is-primary"
+        id="edit-button">Edit</a>
+      <a href="{{ url_for('delete_yarn', yarn_id=yarn._id) }}" class="button is-small is-primary"
+        id="delete-button">Delete</a>
+    </div>
   </div>
   {% endfor %}
 </div>
 
 {% endblock %}
-
-
-

@@ -203,65 +203,12 @@ I chose to use MongoDB for my database and set it up with the following collecti
 
 ## Testing
 
-### As a user, I want to be able to easily navigate the site
-#### Navbar
-#### Plan
-The navbar can be seen on larger screens but on small screens is too crowded so will have a burger dropdown menu.
-
-#### Results
-The burger element of the navbar was trickier to implement than I initially realised buut ultimatley works well, the burger on the small mobile screen size keeps the look of the site clean and consistent. All items from the nav appear in the dropdown menu so all functionality is available on small devices as well as large screens.
-the nav bar keeps all the navigation elements in one place so the user will be able to move through the site with ease.
-
-### As a user, I want to be able to register for an account
-### Registration/ Sign Up
-#### Plan
-There will be a form to fill in to create a username and password. When the form is filled in correctly then there will be a flash message for the user to show succes and they will be redirected to their profile page. If the username already exists the user will be shown a message to say that name is already in user and redirected to the sign up page to choose another one.
-
-#### Results
-After a giltch with the connection with Mongo URI this function is now fully working I have tested it by setting up usernames and also by trying to set up an account with an exicstung username to check that the messages are correctly shown for the user.
-During Testing I also found that I had forgotten to add the required class to the username and password fields meaning that if you hit the submit button and the firlds were empty the whole site crashed! After adding the needed fields the function works as expected.
-
-
-### As a user, I want to be able to log in and out of the site to leave reviews.
-### Login/ Log out functionality
-#### Plan
-The user will be able to login to the site as well as logout when finished using the site.
-#### Results
-There are clear buttons in the navbar to log in and out of the site, both functions work correctly and have been tested by myself and others to access accounts created.
-
-### As a user, I want to be able to add yarns to the library.
-### Add a Yarn
-#### Plan
-The user will be able to add new yarns to the library.
-#### Results
-In the navbar there is a link to the form to fill in with infromation about a yarn that a user wants to add to the library.
-I have tested that the function pushes the infromation to the database and other users have added yarns to the library as well.
-### Update Yarn
-#### Plan
-Users should be able to update yarn records with additional information or corrections to information on the cards.
-#### Results
-There is an edit button on each yarn card so that the user can update yarns with ne information or correct any information that is incorrect. But I then decided that it would be better if the user could only update records that they had created, as a security measure so that a user couldn't log in and just change every record. This has been tested by myself and other users.
-
-### Delete A Yarn
-#### Plan
-Users can delete a yarn.
-This was an additional function that I decided to add in case a yarn was discontinued.
-#### Results
-There is now a function to delete yarns from the library wich I have tested. As with the edit function a user can only edit or delete a yarn that they created. This means that a user caouln't just ogin and delete all the record in the library.
+Testing can be found in [Testing](testing.md)
 
 [Back to Top](#table-of-contents)
 ## Bugs
-### Registration/sign in function
-When writing this function its initially wouldn't work despite the Python code being correct after searching through the code, with the help of a Tutor as second set of eyes we found that the password in the MONG_URI was not working so I reset the password for the admin and linked it up again. After this the registration function worked correctly and new users were saved to the database.
-### Login function
-The login function was not redirevting through to the profile page, this was due to an error in my coding where I had forgotten to pass in the username perameter to the redirect function. It now works fine.
-### Adding a new yarn
-Whilst the function was working the yarn producer name was not pulling through from the database, on closer insepction of my code I found that I had misspelt the key name so corrected this and then all the infromation was moving to and from the database correcty.
-### Navbar
-Hamburger icon was not working. This was due to an error in the javascript that I had written for it I had passed the element the wrong id, once this was corrected then the function workd.
-This then threw another glitch as it was showing an error on the home page where the burger was not present as such I wrapped the function within an if statement so that the function could only be called whe the burger was present on the page. 
-### Heroku app not connected to Database
-During testing it came to light that the Heroku app was not connected to the Mongo database this was probably due to the earlier error with the Mongo URI in the registration function.To over come this I re-entered the details needed into the config vars and the app and database are now able to connect.
+
+Bugs encountered during the build can be found in [Bugs](bugs.md)
 
 [Back to Top](#table-of-contents)
 ## Deployment
