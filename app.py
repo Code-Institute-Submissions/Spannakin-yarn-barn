@@ -50,7 +50,7 @@ def register():
         flash("Registration Successful!")
         return redirect(url_for(
             "profile", username=session["user"]))
-    return render_template("pages/signin.html", register=True)
+    return render_template("pages/signup.html", register=True)
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -81,21 +81,29 @@ def login():
             flash("Incorrect Username and/or Password")
             return redirect(url_for("login"))
 
-    return render_template("pages/signin.html", login=True)
+    return render_template("pages/login.html", login=True)
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     """
     Function to render the profile page for a user
+    Shows thier reviews and provides ability to edit them
     If unsuccessful the user is redirected to the login page
     """
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
-
     if session["user"]:
-        return render_template("pages/profile.html", username=username)
+        # grab session user from db
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        # get the reviews written by session user
+        yarn_reviews = list(mongo.db.yarn.find(
+            {"created_by": session["user"]}))
+        reviews = list(mongo.db.yarn.find())
 
+        return render_template(
+            "pages/profile.html", username=username,
+            yarn_reviews=yarn_reviews, reviews=reviews)
+    flash("Please log in")
     return redirect(url_for("login"))
 
 
@@ -122,13 +130,15 @@ def yarns():
     return render_template("pages/yarns.html", yarn=yarn)
 
 
-@app.route("/see_review/<reviews>", methods=["GET", "POST"])
+@app.route("/yarn_review/<review>", methods=["GET", "POST"])
 def yarn_review(reviews):
     """
-    view the full review of individual book
+    view the full review of individual yarn
     """
-    reviews = list(mongo.db.reviews.find({"_id": ObjectId(reviews)}))
-    return render_template("yarn-review.html", reviews=reviews)
+    # get the reviews written by session user
+    yarn_reviews = list(mongo.db.yarn.find({"_id": ObjectId()}))
+    return render_template(
+        "yarn-review.html", yarn_reviews=yarn_reviews, reviews=reviews)
 
 
 @app.route("/add/yarn", methods=["GET", "POST"])
