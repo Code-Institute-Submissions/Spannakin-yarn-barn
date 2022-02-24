@@ -13,18 +13,12 @@
 
   <div class="navbar-menu" id="navbar-links">
     <div class="navbar-start">
-      <a href="{{ url_for('home')}}" class="navbar-item" aria-label="link to home page">
-        Home
-      </a>
-
       <a href="{{ url_for('yarns')}}" class="navbar-item" aria-label="link to yarns page">
         Yarns
       </a>
-
       <a href="{{ url_for('add_yarn')}}" class="navbar-item" aria-label="link to add yarn page">
         Add a Yarn
       </a>
-
       <a href="{{ url_for('profile', username=session['user']) }}" class="navbar-item" aria-label="link to profile page">
         My Profile
       </a>
