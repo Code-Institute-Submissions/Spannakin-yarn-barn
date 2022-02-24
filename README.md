@@ -315,7 +315,7 @@ To clone the project:
 
 [Back to Top](#table-of-contents)
 ## Credits
-Thanks as always to Simen [Eventyret_mentor](https://github.com/Eventyret) who has helped me through this project with helpful and insightful tips on what I've been trying to make! Thanks also to the awesome [Code Institute](https://codeinstitute.net/) tutors (especially Johann, who are there for you when ever you get stuck along the way.
+Thanks as always to Simen [Eventyret_mentor](https://github.com/Eventyret) who has helped me through this project with helpful and insightful tips on what I've been trying to make! Thanks also to the awesome [Code Institute](https://codeinstitute.net/) tutors (especially Johann and Kevin), who are there for you when ever you get stuck along the way.
 Thanks to [Unsplash](https://unsplash.com/)for making their images available.
 Thanks to the [Stackoverflow](https://stackoverflow.com/) for a great community always happy to help.
 My family and friends have been a huge support in this this project as I may have overcommitted myself so Thanks for letting me bailout to go write code!
