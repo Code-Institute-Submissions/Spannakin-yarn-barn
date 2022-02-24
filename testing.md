@@ -45,4 +45,5 @@
 
 | Feature        | Expected           | Testing  | Result | Pass/Fail |
 | ------------- |-------------| -----|  ---------- | :----: |
+|Ability to register for an account | When clicking the Sign up the user will be directed to a form to register for an account with a unique username and password | 
 
