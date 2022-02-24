@@ -164,26 +164,31 @@ def edit_yarn(yarn_id):
     that their submission has been successful
     """
     if request.method == "POST":
-        yarn_createdby = mongo.db.yarn.find_one({"_id": ObjectId(yarn_id)})
-        if session["user"] == yarn_createdby["created_by"]:
-            yarn = {
-                "yarn_name": request.form.get("yarn_name"),
-                "yarn_producer": request.form.get("yarn_producer"),
-                "yarn_weight": request.form.get("yarn_weight"),
-                "yarn_colour": request.form.get("yarn_colour"),
-                "yarn_review": request.form.get("yarn_review"),
-                "created_by": session["user"]
-            }
-            mongo.db.yarn.update({"_id": ObjectId(yarn_id)}, yarn)
-            flash("Yarn Successfully Updated")
-        else:
-            flash("Not authorised to update this yarn")
+        try:
+            yarn_createdby = mongo.db.yarn.find_one({"_id": ObjectId(yarn_id)})
+            if session["user"] == yarn_createdby["created_by"]:
+                yarn = {
+                    "yarn_name": request.form.get("yarn_name"),
+                    "yarn_producer": request.form.get("yarn_producer"),
+                    "yarn_weight": request.form.get("yarn_weight"),
+                    "yarn_colour": request.form.get("yarn_colour"),
+                    "yarn_review": request.form.get("yarn_review"),
+                    "created_by": session["user"]
+                }
+                mongo.db.yarn.update({"_id": ObjectId(yarn_id)}, yarn)
+                flash("Yarn Successfully Updated")
+            else:
+                flash("Not authorised to update this yarn")
 
-    yarn = mongo.db.yarn.find_one({"_id": ObjectId(yarn_id)})
-    return render_template("pages/edit-yarn.html/", yarn=yarn)
+            yarn = mongo.db.yarn.find_one({"_id": ObjectId(yarn_id)})
+            return render_template("pages/edit-yarn.html/", yarn=yarn)
+        except:
+            flash("There was an error please try again later")
+            yarn = mongo.db.yarn.find_one({"_id": ObjectId(yarn_id)})
+            return render_template("pages/edit-yarn.html/", yarn=yarn)
 
 
-@app.route("/delete_yarn/<yarn_id>", methods=["GET", "POST"])
+@app.route("/delete/yarn/<yarn_id>", methods=["GET", "POST"])
 def delete_yarn(yarn_id):
     """
     Function to delete a yarn from the database
