@@ -9,13 +9,14 @@
       <!--yarn name and subtitile-->
       <div class="column is-mobile">
         <p class="title is-4">Yarn Name: {{ yarn.yarn_name }}</p>
+        <br>
         <p class="subtitle is-6">By {{ yarn.yarn_producer }}</p>
         <p>Yarn weight: {{ yarn.yarn_weight }}</p>
         <p>Yarn colour: {{ yarn.yarn_colour }}</p>
       </div>
     </div>
     <!--Yarn review-->
-    <div class="column is-mobile">
+    <div class="card-body-description column is-mobile">
       <p class="subtitle is-4">Review</p>
       <p>{{ yarn.yarn_review }}</p>
     </div>

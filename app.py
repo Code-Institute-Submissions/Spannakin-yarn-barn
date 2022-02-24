@@ -130,17 +130,6 @@ def yarns():
     return render_template("pages/yarns.html", yarn=yarn)
 
 
-@app.route("/yarn_review/<review>", methods=["GET", "POST"])
-def yarn_review(reviews):
-    """
-    view the full review of individual yarn
-    """
-    # get the reviews written by session user
-    yarn_reviews = list(mongo.db.yarn.find({"_id": ObjectId()}))
-    return render_template(
-        "yarn-review.html", yarn_reviews=yarn_reviews, reviews=reviews)
-
-
 @app.route("/add/yarn", methods=["GET", "POST"])
 def add_yarn():
     """

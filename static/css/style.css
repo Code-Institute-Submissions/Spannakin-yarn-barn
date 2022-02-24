@@ -50,6 +50,7 @@ h2 {
 /* navbar*/
 .navbar {
     background-color: var(--navbar-color);
+    height: 5rem;
 }
 .navbar-end {
     float: right;
