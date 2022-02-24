@@ -1,13 +1,13 @@
 {% extends 'layout/base.html' %}
 {% block content %}
-{% include 'components/navigation/basic_navigation.html' %}
+{% include 'components/navigation/basic-navigation.html' %}
 
 <div class="container">
     <div class="row">
         <div class="col s6">
             <h1>Something went wrong</h1>
             <p> {{ error_message }} </p>
-            <a href="{{ url_for('home') }}" class="form-buttons">Click here to go back to the home page</a>
+            <a href="{{ url_for('yarns') }}" class="form-buttons">Click here to go back to the yarns main page</a>
         </div>
     </div>
 </div>
