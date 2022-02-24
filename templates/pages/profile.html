@@ -25,25 +25,22 @@
                   <thead>
                       <tr>
                           <th>Yarn Name</th>
-                          <th>By</th>
+                          <th>Review</th>
+                  
                       </tr>
                   </thead>
-                  {% for review in yarn_reviews %}
+                  {% for yarn in yarn_reviews %}
                       <tbody>
                           <tr>
                               <td>
-                                  <a href="{{ url_for('yarn_review', reviews=review._id) }}">
-                                      <h6 class="profile-link tooltipped" data-position="top" data-tooltip="Go to book">
-                                          {{ review.yarn_name }}</h6>
+                                  <a href="{{ url_for('yarn_review', review=yarn_reviews._id) }}">
+                                      <h6 class="profile-link tooltipped" data-position="top" data-tooltip="Go to yarn">
+                                          {{ yarn.yarn_name }}</h6>
                                   </a>
                               </td>
-                              <td>{{ review.yarn_producer }}</td>
-                              <td>{{ review.yarn_weight}}</td>
-                              <td>{{ review.yarn_colour}}</td>
-                              <td>{{ review.yarn_review}}</td>
+                              <td>{{ yarn.yarn_review}}</td>
                           </tr>
                       </tbody>
-                      
                   {% endfor %}
               </table>
           {% else %}
