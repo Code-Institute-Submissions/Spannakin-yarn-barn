@@ -1,0 +1,11 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+{% include 'components/navigation/basic-navigation.html' %}
+{% include 'components/messages/messages.html' %}
+
+  <h1>Yarn Barn</h1>
+
+  <h2>Login</h2>
+  {% include 'components/forms/auth.html' %}
+
+{% endblock %}
