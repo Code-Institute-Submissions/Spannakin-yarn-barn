@@ -26,6 +26,8 @@
                       <tr>
                           <th>Yarn Name</th>
                           <th>Review</th>
+                          <th>Edit</th>
+                          <th>Delete</th>
                   
                       </tr>
                   </thead>
@@ -33,12 +35,19 @@
                       <tbody>
                           <tr>
                               <td>
-                                  <a href="{{ url_for('yarn_review', review=yarn_reviews._id) }}">
-                                      <h6 class="profile-link tooltipped" data-position="top" data-tooltip="Go to yarn">
-                                          {{ yarn.yarn_name }}</h6>
+                                  <h6 class="profile-link tooltipped" data-position="top" data-tooltip="Go to yarn">
+                                      {{ yarn.yarn_name }}</h6>
                                   </a>
                               </td>
                               <td>{{ yarn.yarn_review}}</td>
+                              <td>
+                                <a href="{{ url_for('edit_yarn', yarn_id=yarn._id) }}" class="button is-small is-primary"
+                                  id="edit-button">Edit</a>
+                              </td>
+                              <td>
+                                <a href="{{ url_for('delete_yarn', yarn_id=yarn._id) }}" class="button is-small is-primary"
+                                  id="delete-button">Delete</a>
+                              </td>
                           </tr>
                       </tbody>
                   {% endfor %}
