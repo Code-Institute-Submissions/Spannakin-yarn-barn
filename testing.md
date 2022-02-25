@@ -55,6 +55,14 @@
 
 | Feature        | Expected           | Testing  | Result | Pass/Fail |
 | ------------- |-------------| -----|  ---------- | :----: |
-|Ability to log into an existing account | When clicking the Log In the user will be directed to a form to input their user name and password | Pass || Access to User Profile when correct user credentials are input | When user inputs correct username and pass word the user is then redirected to the Profile page | Input correct details for user and submit form | With correct details input and submitted the user is redirected to the Profile page | Pass ||
+|Ability to log into an existing account | When clicking the Log In the user will be directed to a form to input their user name and password | Pass || Access to User Profile when correct user credentials are input | When user inputs correct username and pass word the user is then redirected to the Profile page | Input correct details for user and submit form | With correct details input and submitted the user is redirected to the Profile page | Pass || Incorrect details are falgged to user | If user submits invalid information such as wrong username/ password this is flagged to the user | Incorrect username / password input to form | When wrong information added to form the user is given a message to say that the username/ password was incorrect and to try again | Pass ||
+
+[Back to contents](#contents)
+
+### Yarns Page
+
+| Feature        | Expected           | Testing  | Result | Pass/Fail |
+| ------------- |-------------| -----|  ---------- | :----: |
+|Yarns page shows all yarns with their reviews | The page loads all yarn reviews on the site | click the Yarns link and the page loads with all yarns and their reviews | Pass||
 
 [Back to contents](#contents)
