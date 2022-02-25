@@ -66,3 +66,8 @@
 |Yarns page shows all yarns with their reviews | The page loads all yarn reviews on the site | click the Yarns link and the page loads with all yarns and their reviews | Pass||
 
 [Back to contents](#contents)
+
+### Adding Yarn
+
+| Feature        | Expected           | Testing  | Result | Pass/Fail |
+| ------------- |-------------| -----|  ---------- | :----: |
