@@ -150,6 +150,7 @@ def add_yarn():
         }
         mongo.db.yarn.insert_one(yarn)
         flash("Yarn Successfully Added to the Library")
+        return redirect(url_for("yarns"))
 
     return render_template("pages/addyarn.html", add_yarn=True)
 

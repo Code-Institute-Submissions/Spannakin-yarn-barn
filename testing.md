@@ -17,6 +17,12 @@
 * [Lighthouse](#lighthouse)
 * [Conclusions](#conclusions)
 
+## Validation
+* HTML code was vaildated through [WC3 HTML Markup validator](* HTML code was vaildated through [WC3 HTML Markup validator](https://validator.w3.org/nu/) and passed.
+* CSS code was vaildated using [WC3 CSS Validation](https://jigsaw.w3.org/css-validator/) and passed.
+* JS code was validated using [JSHint](https://jshint.com/)) and passed.
+* CSS code was vaildated using [WC3 CSS Validation](https://jigsaw.w3.org/css-validator/) and passed.
+* JS code was validated using [JSHint](https://jshint.com/)
 
 ## Functionality
 ### Homepage
@@ -71,3 +77,24 @@
 
 | Feature        | Expected           | Testing  | Result | Pass/Fail |
 | ------------- |-------------| -----|  ---------- | :----: |
+| Ability for user to add a Yran to the library | The user is directed to a form to fill in the details of a new yarn | Click the Add Yarn Link | User is redirected to add yarn form | Pass|| When the user has added the information to the form and clicked complete the yarn is added to the Yarns page for all users to see | Fill in the form and submit it and check that the new yarn is added to the Yarns page | Pass || 
+
+### Editing a Yarn
+
+### Deleting a Yarn
+
+| Feature        | Expected           | Testing  | Result | Pass/Fail |
+| ------------- |-------------| -----|  ---------- | :----: |
+| Ability for user to delete a yarn that they have reviewed | The user has the option to delete a yarn from their profile | Click the Delete button on the profile page | Yarn is deleted and the user is redirected to the Yarns page | Pass||
+
+### User Profile
+
+## User Stories
+
+## Responsivness
+
+### Wave
+The site was inspected for accessibility using the [Wave Browser Extension](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) and changes made to HTML following this inspection. 
+
+### Lighthouse
+All pages were put through Lighthouse and the scores were all very good, I could still work on labelling a little more consistently.
