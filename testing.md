@@ -81,6 +81,9 @@
 
 ### Editing a Yarn
 
+| Feature        | Expected           | Testing  | Result | Pass/Fail |
+| ------------- |-------------| -----|  ---------- | :----: |
+
 ### Deleting a Yarn
 
 | Feature        | Expected           | Testing  | Result | Pass/Fail |
@@ -88,6 +91,10 @@
 | Ability for user to delete a yarn that they have reviewed | The user has the option to delete a yarn from their profile | Click the Delete button on the profile page | Yarn is deleted and the user is redirected to the Yarns page | Pass||
 
 ### User Profile
+
+| Feature        | Expected           | Testing  | Result | Pass/Fail |
+| ------------- |-------------| -----|  ---------- | :----: |
+| Ability for user to view the yarns that they have previously reviewed | Click onto Profile page and check that users yarn reviews are visible | Yran reviews for user can be viewed | Pass|| A user can edit a review that they have previuosly submitted | Clicking in the edit button should give the user access to the edit yarn function | The button take the user to the Edit Yarn page | Pass ||  A user can delete a review that they have previuosly submitted | Clicking in the delete button shold allow the user to delete a yarn | The button deletes the yarn | Pass ||
 
 ## User Stories
 
