@@ -54,14 +54,17 @@
 
 | Feature        | Expected           | Testing  | Result | Pass/Fail |
 | ------------- |-------------| -----|  ---------- | :----: |
-|Ability to register for an account | When clicking the Sign up the user will be directed to a form to register for an account with a unique username and password | Pass || Form sends error message if the username is already taken | Form will send a flash message to user if username is already taken and suggest user try a different username | Input a username that already exists into the form and submit to test message | Pass ||
+|Ability to register for an account | When clicking the Sign up the user will be directed to a form to register for an account with a unique username and password | Click on sign up and see if the correct form is provided | When user clicks on sign up the user is redirected the the correct form | Pass |
+| Form sends error message if the username is already taken | Form will send a flash message to user if username is already taken and suggest user try a different username | Input a username that already exists into the form and submit to test message | When a username that already exists is input a message is given to user to tey again | Pass ||
 
 
 #### Log in
 
 | Feature        | Expected           | Testing  | Result | Pass/Fail |
 | ------------- |-------------| -----|  ---------- | :----: |
-|Ability to log into an existing account | When clicking the Log In the user will be directed to a form to input their user name and password | Pass || Access to User Profile when correct user credentials are input | When user inputs correct username and pass word the user is then redirected to the Profile page | Input correct details for user and submit form | With correct details input and submitted the user is redirected to the Profile page | Pass || Incorrect details are falgged to user | If user submits invalid information such as wrong username/ password this is flagged to the user | Incorrect username / password input to form | When wrong information added to form the user is given a message to say that the username/ password was incorrect and to try again | Pass ||
+|Ability to log into an existing account | When clicking the Log In the user will be directed to a form to input their user name and password | Click the log in button to check the correct form is loaded for the user | When user click login they are directed to the correct form to fill in their details | Pass |
+| Access to User Profile when correct user credentials are input | When user inputs correct username and pass word the user is then redirected to the Profile page | Input correct details for user and submit form | With correct details input and submitted the user is redirected to the Profile page | Pass |
+| Incorrect details are falgged to user | If user submits invalid information such as wrong username/ password this is flagged to the user | Incorrect username / password input to form | When wrong information added to form the user is given a message to say that the username/ password was incorrect and to try again | Pass ||
 
 [Back to contents](#contents)
 
@@ -83,6 +86,8 @@
 
 | Feature        | Expected           | Testing  | Result | Pass/Fail |
 | ------------- |-------------| -----|  ---------- | :----: |
+| Ability for user to edit a yarn that they have alredy reviewed | When clicking the edit button the user will be redirected to the edit yarn page | Click the edit button on the profile page | the edit button passes the user to the edit yarn page | Pass|
+| The user can edit the deatils of a yarn tat they have already reviewd using the form on the edit yarn page | Filling in the ofrm and submitting the changed will update the yarn on the all yarns page | Edit a yarn and check that the information is updated | Pass||
 
 ### Deleting a Yarn
 
@@ -98,6 +103,14 @@
 
 ## User Stories
 
+| As a User        | I want to...           | Testing  | Result | Pass/Fail |
+| ------------- |-------------| -----|  ---------- | :----: |
+| User | easily navigate the site | Check that all navigation links work and clearly visible | tested navigation functions | Pass |
+| User | register for an account| Check that registration function is working correctly and that a new user can register for an account | tested registration function | Pass |
+| User | log in and out of the site | Check that the login and log out functions are working as expected | Log in and log out functions have been tested and are working correctly | Pass |
+| User | add a review of a yarn that I have worked with to help other crafters| Check that the add yarn function is working and that new yarns are showing on the main yarns page | the add yarns function has been tested as well as the yarn page ensuring that the yarn informations is showing in the correct format | Pass |
+| User | edit yarns I have reviewed | Check that the edit yarn function is working correctly and that the updated information is showing on the main yarns page | the edit yarn function has been tested and is working correctly | Pass |
+| User | delete a yarn I have previously reviewed | Check that the delete yarn function is working correctly and thata yarn is no longer showing on the main yarns page | the delete yarn function has been tested and is working correctly | Pass |
 ## Responsivness
 
 ### Wave
