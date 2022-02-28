@@ -43,7 +43,8 @@ Have you ever wondered what yarn is going to be best for your next project? Is a
 * As a user, I want to be able to leave a review of a yarn that I have worked with to help other crafters.
 * As a user, I want to be able to register for an account
 * As a user, I want to be able to log in and out of the site to leave reviews.
-* As a user, I want to be able to add yarns to the library.
+* As a user, I want to be able to edit yarns I have reviewed.
+* As a user, I want to be able to delete a yarn that I have added to the library.
  
 [Back to Top](#table-of-contents)
 ### User Requirements and Expectations
